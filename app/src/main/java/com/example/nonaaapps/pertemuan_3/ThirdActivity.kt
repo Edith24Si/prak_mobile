@@ -1,5 +1,6 @@
 package com.example.nonaaapps.pertemuan_3
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -10,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.nonaaapps.R
 import com.example.nonaaapps.databinding.ActivityThirdBinding
+import kotlin.jvm.java
 
 class ThirdActivity : AppCompatActivity() {
     private lateinit var binding: ActivityThirdBinding
@@ -32,6 +34,10 @@ class ThirdActivity : AppCompatActivity() {
         binding.btnKirim.setOnClickListener {
             val nomor= binding.inputNoTujuan.text
             Toast.makeText(this, "pesan berhasil dikirim ke $nomor", Toast.LENGTH_SHORT).show()
+
+            val intent = Intent(this, ThirdResultActivity::class.java)
+            startActivity(intent)
+
         }
     }
 }
