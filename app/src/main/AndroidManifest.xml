@@ -14,13 +14,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NonaaApps">
         <activity
+            android:name=".AuthActivity"
+            android:exported="false" />
+        <activity
             android:name=".pertemuan5.FifthActivity"
             android:exported="false" />
         <activity
             android:name=".pertemuan5.WebViewActivity"
             android:exported="false" />
         <activity
-            android:name=".AuthActivity"
+            android:name=".SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
