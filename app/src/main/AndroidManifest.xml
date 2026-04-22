@@ -13,40 +13,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NonaaApps">
-
+        <activity
+            android:name=".pertemuan5.FifthActivity"
+            android:exported="false" />
         <activity
             android:name=".pertemuan5.WebViewActivity"
             android:exported="false" />
-
         <activity
-            android:name=".pertemuan5.FifthActivity"
+            android:name=".AuthActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".pertemuan4.FourthActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan_3.ThirdResultActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan2.SecondActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan_3.ThirdActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
     </application>
 
 </manifest>
