@@ -32,7 +32,7 @@ class WebViewActivity : AppCompatActivity() {
         // 1. Mengaktifkan Toolbar
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "Web Merdeka" // Ganti judulnya jika kamu ingin melakukan improvisasi
+            title = "Web Bina Desa"
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
@@ -40,8 +40,9 @@ class WebViewActivity : AppCompatActivity() {
         // 2. Mengatur WebView
         binding.webView.webViewClient = WebViewClient()
         binding.webView.settings.javaScriptEnabled = true
-        // Kamu bisa mengganti link ini dengan website kampus atau website favoritmu untuk improvisasi
-        binding.webView.loadUrl("https://merdeka.com")
+        val url = intent.getStringExtra("url") ?: "https://nona-produkhukumbinadesa.alwaysdata.net"
+
+        binding.webView.loadUrl(url)
 
         // 3. Agar Toolbar hide/show saat web di-scroll
         binding.webView.setOnScrollChangeListener { _, _, scrollY, _, oldScrollY ->

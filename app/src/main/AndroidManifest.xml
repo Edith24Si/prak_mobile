@@ -14,12 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NonaaApps">
 
+        <!-- LAUNCHER dipindah ke SplashScreen -->
         <activity
-            android:name=".pertemuan5.WebViewActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".pertemuan5.FifthActivity"
+            android:name=".pertemuan6.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,21 +25,28 @@
         </activity>
 
         <activity
-            android:name=".pertemuan4.FourthActivity"
+            android:name=".pertemuan6.AuthActivity"
             android:exported="false" />
 
+        <!-- LAUNCHER dihapus dari FifthActivity -->
+        <activity
+            android:name=".pertemuan5.FifthActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan5.WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".pertemuan4.FourthActivity"
+            android:exported="false" />
         <activity
             android:name=".pertemuan_3.ThirdResultActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan2.SecondActivity"
             android:exported="false" />
-
         <activity
             android:name=".pertemuan_3.ThirdActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
