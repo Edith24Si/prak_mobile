@@ -19,8 +19,8 @@ class AuthActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("RegulasiDesaPref", MODE_PRIVATE)
 
         binding.btnLogin.setOnClickListener {
-            val username = binding.etUsername.text.toString()
-            val password = binding.etPassword.text.toString()
+            val username = binding.edtUsername.text.toString()
+            val password = binding.edtPassword.text.toString()
 
             if (username == password) {
                 sharedPref.edit().apply {
