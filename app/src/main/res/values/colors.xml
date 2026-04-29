@@ -5,5 +5,11 @@
     <color name="blue">#03A9F4</color>
     <color name="hijau">#8BC34A</color>
     <color name="merah">#E91E63</color>
+    <color name="p2_color">#E91E63</color>
+    <color name="p3_color">#03A9F4</color>
+    <color name="p4_color">#03A9F4</color>
+    <color name="p5_color">#E91E63</color>
+    <color name="p6_color">#E91E63</color>
+    <color name="p7_color">#03A9F4</color>
 </resources>
 

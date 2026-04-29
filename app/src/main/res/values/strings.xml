@@ -2,5 +2,7 @@
     <string name="app_name">Nonaa Apps</string>
     <string name="judul">Nonaa Apps</string>
     <string name="judul_baru">Silahkan periksa nomor Anda</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
