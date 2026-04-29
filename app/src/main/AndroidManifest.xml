@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NonaaApps">
         <activity
+            android:name=".SplashScreenActivity"
+            android:exported="false" />
+        <activity
             android:name=".pertemuan7.SevenActivity"
             android:exported="false" />
         <activity
@@ -26,7 +29,7 @@
             android:name=".pertemuan5.WebViewActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name=".BaseActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

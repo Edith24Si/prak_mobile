@@ -8,14 +8,12 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.nonaaapps.Home.pertemuan2.SecondActivity
+import com.example.nonaaapps.Home.pertemuan4.FourthActivity
+import com.example.nonaaapps.Home.pertemuan5.FifthActivity
+import com.example.nonaaapps.Home.pertemuan7.SevenActivity
+import com.example.nonaaapps.Home.pertemuan_3.ThirdActivity
 import com.example.nonaaapps.databinding.ActivityMainBinding
-import com.example.nonaaapps.databinding.ActivityThirdBinding
-import com.example.nonaaapps.pertemuan2.SecondActivity
-import com.example.nonaaapps.pertemuan4.FourthActivity
-import com.example.nonaaapps.pertemuan5.FifthActivity
-import com.example.nonaaapps.pertemuan7.SevenActivity
-import com.example.nonaaapps.pertemuan_3.ThirdActivity
-import com.example.nonaaapps.pertemuan_3.ThirdResultActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class MainActivity : AppCompatActivity() {
@@ -51,8 +49,6 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("age", 25)
 
             startActivity(intent)
-
-
 
         }
         binding.btnP5.setOnClickListener {

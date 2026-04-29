@@ -1,4 +1,4 @@
-package com.example.nonaaapps.pertemuan7
+package com.example.nonaaapps.Home.pertemuan7
 
 import android.os.Bundle
 import android.view.MenuItem
@@ -26,7 +26,7 @@ class SevenActivity : AppCompatActivity() {
         }
         setSupportActionBar(binding.toolbar)
         supportActionBar?.apply {
-            title = "Pertemuan-7"
+            title = "Pertemuan7"
             setDisplayHomeAsUpEnabled(true)
             setDisplayShowHomeEnabled(true)
         }
