@@ -28,46 +28,38 @@ class MainActivity : AppCompatActivity() {
         }
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
-        binding.btnP2.setOnClickListener {
+        binding.btnP4.setOnClickListener {
+
             val intent = Intent(this, FourthActivity::class.java)
+            intent.putExtra("name", "Politeknik Caltex Riau")
+            intent.putExtra("from", "Rumbai")
+            intent.putExtra("age", 25)
+
             startActivity(intent)
+
+
+
         }
-        binding.btnP3.setOnClickListener {
-            val intent = Intent(this, FourthActivity::class.java)
-            startActivity(intent)
-        }
-            binding.btnP4.setOnClickListener {
-                val intent = Intent(this, FourthActivity::class.java)
-                intent.putExtra("name", "Politeknik Caltex Riau")
-                intent.putExtra("from", "Rumbai")
-                intent.putExtra("age", 25)
-                startActivity(intent)
-            }
-            binding.btnP5.setOnClickListener {
-                val intent = Intent(this, FourthActivity::class.java)
-                startActivity(intent)
-            }
-            binding.btnP7.setOnClickListener {
-                val intent = Intent(this, FourthActivity::class.java)
-                startActivity(intent)
-            }
-            binding.bntLogout.setOnClickListener {
-                AlertDialog.Builder(this)
-                    .setTitle("Konfirmasi")
-                    .setMessage("Apakah Anda yakin ingin logout?")
-                    .setPositiveButton("Ya") { dialog, _ ->
-                        val editor = sharedPref.edit()
-                        editor.clear()
-                        editor.apply()
-                        dialog.dismiss()
-                        val intent = Intent(this, AuthActivity::class.java)
-                        intent.flags =
-                            Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                        startActivity(intent)
-                        finish()
-                    }
-                    .setNegativeButton("Tidak", null)
-                    .show()
-            }
+        binding.bntLogout.setOnClickListener {
+            AlertDialog.Builder(this)
+                .setTitle("Konfirmasi")
+                .setMessage("Apakah Anda yakin ingin logout?")
+                .setPositiveButton("Ya") { dialog, _ ->
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
+
+                    dialog.dismiss()
+
+
+
+                    val intent = Intent(this, AuthActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    finish()
+                }
+                .setNegativeButton("Tidak", null)
+                .show()
         }
     }
+}
