@@ -10,7 +10,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.nonaaapps.databinding.ActivityMainBinding
 import com.example.nonaaapps.databinding.ActivityThirdBinding
+import com.example.nonaaapps.pertemuan2.SecondActivity
 import com.example.nonaaapps.pertemuan4.FourthActivity
+import com.example.nonaaapps.pertemuan5.FifthActivity
+import com.example.nonaaapps.pertemuan7.SevenActivity
+import com.example.nonaaapps.pertemuan_3.ThirdActivity
 import com.example.nonaaapps.pertemuan_3.ThirdResultActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
@@ -28,6 +32,17 @@ class MainActivity : AppCompatActivity() {
         }
         val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
+        binding.btnP2.setOnClickListener {
+
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnP3.setOnClickListener {
+
+            val intent = Intent(this, ThirdActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnP4.setOnClickListener {
 
             val intent = Intent(this, FourthActivity::class.java)
@@ -38,6 +53,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
 
+
+        }
+        binding.btnP5.setOnClickListener {
+
+            val intent = Intent(this, FifthActivity::class.java)
+            startActivity(intent)
+        }
+        binding.btnP7.setOnClickListener {
+
+            val intent = Intent(this, SevenActivity::class.java)
+            startActivity(intent)
 
         }
         binding.bntLogout.setOnClickListener {
