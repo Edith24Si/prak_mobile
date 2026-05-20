@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.edit
 import com.example.nonaaapps.AuthActivity
+import com.example.nonaaapps.Home.pertemuan10.TenthActivity
 import com.example.nonaaapps.Home.pertemuan2.SecondActivity
 import com.example.nonaaapps.Home.pertemuan4.FourthActivity
 import com.example.nonaaapps.Home.pertemuan5.FifthActivity
@@ -68,6 +69,9 @@ class HomeFragment : Fragment() {
 
         binding.btnP9.setOnClickListener {
             startActivity(Intent(requireContext(), NinthActivity::class.java))
+        }
+        binding.btnP10.setOnClickListener {
+            startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
         binding.bntLogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
