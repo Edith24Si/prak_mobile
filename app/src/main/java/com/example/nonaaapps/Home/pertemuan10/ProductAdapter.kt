@@ -1,5 +1,6 @@
 package com.example.nonaaapps.Home.pertemuan10
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -26,7 +27,7 @@ class ProductAdapter(
         with(holder.binding) {
             tvProductName.text = item.name
             tvProductPrice.text = item.price
-
+            Log.e("===PRODUK MUNCUL", item.name)
             Glide.with(holder.itemView.context)
                 .load(item.imageUrl)
                 .into(imgProduct)
