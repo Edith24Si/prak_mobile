@@ -1,13 +1,19 @@
 package com.example.nonaaapps.Message
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import com.example.nonaaapps.Message.tutorial.TutorialMessageActivity
 import com.example.nonaaapps.R
 import com.example.nonaaapps.databinding.FragmentMessageBinding
+import kotlin.jvm.java
 
 class MessageFragment : Fragment() {
 
@@ -43,9 +49,27 @@ class MessageFragment : Fragment() {
             title = "Message"
         }
 
+        setHasOptionsMenu(true)
+
+
             val adapter = MessageAdapter(requireContext(), messageList)
             binding.listMessageItems.adapter = adapter
         }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.message_toolbar_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_tutorial -> {
+                val intent = Intent(requireContext(), TutorialMessageActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
     }
 
 
