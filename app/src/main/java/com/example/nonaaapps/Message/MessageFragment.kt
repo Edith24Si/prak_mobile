@@ -51,10 +51,9 @@ class MessageFragment : Fragment() {
 
         setHasOptionsMenu(true)
 
-
-            val adapter = MessageAdapter(requireContext(), messageList)
-            binding.listMessageItems.adapter = adapter
-        }
+        val adapter = MessageAdapter(requireContext(), messageList)
+        binding.listMessageItems.adapter = adapter
+    }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.message_toolbar_menu, menu)

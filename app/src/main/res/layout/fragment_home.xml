@@ -1,51 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home.HomeFragment">
 
-    <View
-        android:id="@+id/background_header"
-        android:layout_width="0dp"
-        android:layout_height="90dp"
-        android:background="@drawable/bg_header_wave"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:title="Home"
-        app:titleTextColor="@color/white"
-        app:navigationIcon="?attr/homeAsUpIndicator"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="Home"
+            app:titleTextColor="@color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="32dp">
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
                 android:text="Menu Utama"
                 android:textColor="@color/black"
                 android:textSize="24sp"
@@ -54,151 +45,133 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/btnP2"
-                android:layout_width="0dp"
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/grid_button"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
+                android:layout_marginTop="16dp"
+                app:columnCount="2"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                <Button
+                    android:id="@+id/btnP2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="P2"
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/btnP3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="P3"
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/btnP4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="P4"
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/btnP5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="P5"
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/btnP6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="P6"
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/btnP7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="P7"
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/btnP9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="P9"
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/btnP10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="P10"
+                    app:layout_columnWeight="1" />
+
+                <Button
+                    android:id="@+id/btnP13"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="P13"
+                    app:layout_columnWeight="1" />
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <TextView
+                android:id="@+id/tvCatFact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="50dp"
-                android:backgroundTint="@color/p2_color"
-                android:text="Pertemuan 2"
-                android:textColor="@color/white"
-                app:cornerRadius="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                android:gravity="center"
+                android:text="Loading cat fact..."
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@+id/grid_button" />
 
             <Button
-                android:id="@+id/btnP3"
-                android:layout_width="0dp"
+                android:id="@+id/btnRefresh"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="50dp"
-                android:backgroundTint="@color/p3_color"
-                android:text="Pertemuan 3"
-                android:textColor="@color/white"
-                app:cornerRadius="12dp"
+                android:layout_marginTop="12dp"
+                android:text="Refresh"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnP2" />
-
-            <Button
-                android:id="@+id/btnP4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="50dp"
-                android:backgroundTint="@color/p4_color"
-                android:text="Pertemuan 4"
-                android:textColor="@color/white"
-                app:cornerRadius="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnP3" />
-
-            <Button
-                android:id="@+id/btnP5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="50dp"
-                android:backgroundTint="@color/p5_color"
-                android:text="Pertemuan 5"
-                android:textColor="@color/white"
-                app:cornerRadius="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnP4" />
-
-            <Button
-                android:id="@+id/btnP6"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="50dp"
-                android:backgroundTint="@color/p6_color"
-                android:text="Pertemuan 6"
-                android:textColor="@color/white"
-                app:cornerRadius="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnP5" />
-
-            <Button
-                android:id="@+id/btnP7"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="50dp"
-                android:backgroundTint="@color/p7_color"
-                android:text="Pertemuan 7"
-                android:textColor="@color/white"
-                app:cornerRadius="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnP6" />
-
-            <Button
-                android:id="@+id/btnP9"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="50dp"
-                android:backgroundTint="@color/p7_color"
-                android:text="Pertemuan 9"
-                android:textColor="@color/white"
-                app:cornerRadius="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnP7" />
-
-            <Button
-                android:id="@+id/btnP10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="50dp"
-                android:backgroundTint="@color/p7_color"
-                android:text="Pertemuan 10"
-                android:textColor="@color/white"
-                app:cornerRadius="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnP9" />
+                app:layout_constraintTop_toBottomOf="@+id/tvCatFact" />
 
             <Button
                 android:id="@+id/bntLogout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:backgroundTint="@color/merah"
+                android:backgroundTint="#FF0000"
                 android:text="Logout"
                 android:textColor="@color/white"
                 app:cornerRadius="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnP10" />
+                app:layout_constraintTop_toBottomOf="@+id/btnRefresh" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvGallery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:nestedScrollingEnabled="false"
                 android:padding="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bntLogout"
-                tools:listitem="@android:layout/activity_list_item"/>
+                app:layout_constraintTop_toBottomOf="@+id/bntLogout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.core.widget.NestedScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

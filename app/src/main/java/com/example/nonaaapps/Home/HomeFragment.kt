@@ -23,7 +23,8 @@ import com.example.nonaaapps.Home.pertemuan7.SevenActivity
 import com.example.nonaaapps.Home.pertemuan9.NinthActivity
 import com.example.nonaaapps.Home.pertemuan_3.ThirdActivity
 import com.example.nonaaapps.Home.photo.PhotoAdapter
-import com.example.nonaaapps.data.Api.PhotoApiClient
+import com.example.nonaaapps.data.api.CatFactApiClient
+import com.example.nonaaapps.data.api.PhotoApiClient
 import com.example.nonaaapps.databinding.FragmentHomeBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
@@ -80,6 +81,9 @@ class HomeFragment : Fragment() {
         binding.btnP10.setOnClickListener {
             startActivity(Intent(requireContext(), TenthActivity::class.java))
         }
+        binding.btnP13.setOnClickListener {
+            startActivity(Intent(requireContext(), com.example.nonaaapps.Home.pertemuan_13.ThirteenthActivity::class.java))
+        }
         binding.bntLogout.setOnClickListener {
             MaterialAlertDialogBuilder(requireContext())
                 .setTitle("Konfirmasi")
@@ -96,8 +100,25 @@ class HomeFragment : Fragment() {
                 }
                 .show()
         }
+
+        binding.btnRefresh.setOnClickListener {
+            loadCatFact()
+        }
+
+        loadCatFact()
         loadPhoto()
 
+    }
+
+    private fun loadCatFact() {
+        lifecycleScope.launch {
+            try {
+                val response = CatFactApiClient.apiService.getCatFact()
+                binding.tvCatFact.text = "\"${response.fact}\""
+            } catch (e: Exception) {
+                binding.tvCatFact.text = "Gagal mengambil fakta kucing."
+            }
+        }
     }
 
     private fun loadPhoto() {
